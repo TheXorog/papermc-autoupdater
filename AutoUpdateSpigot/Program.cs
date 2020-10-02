@@ -21,15 +21,27 @@ namespace AutoUpdateSpigot
             Console.WriteLine("Loading config..");
             if (!File.Exists("autoupdate-version.txt"))
             {
-                File.WriteAllText("autoupdate-version.txt", "1.16.1");
+                File.WriteAllText("autoupdate-version.txt", "version");
             }
             if (!File.Exists("autoupdate-path.txt"))
             {
-                File.WriteAllText("autoupdate-path.txt", "/home/xorog/Desktop/Server/server.jar");
+                File.WriteAllText("autoupdate-path.txt", "jarpath");
             }
 
             string version = File.ReadAllText("autoupdate-version.txt");
             string path = File.ReadAllText("autoupdate-path.txt");
+
+            if (version == "version")
+            {
+                Environment.Exit(1);
+                return;
+            }
+
+            if (path == "jarpath")
+            {
+                Environment.Exit(1);
+                return;
+            }
 
             string installedbuild = "";
 
