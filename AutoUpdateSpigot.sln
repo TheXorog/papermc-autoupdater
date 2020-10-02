@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoUpdateSpigot", "AutoUpdateSpigot\AutoUpdateSpigot.csproj", "{A329D7AE-DA4D-47AB-B397-07068A817C97}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaperAPI", "PaperAPI\PaperAPI.csproj", "{1DAAA40F-CD2B-430B-BCBA-049CF48E7C85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A329D7AE-DA4D-47AB-B397-07068A817C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A329D7AE-DA4D-47AB-B397-07068A817C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A329D7AE-DA4D-47AB-B397-07068A817C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A329D7AE-DA4D-47AB-B397-07068A817C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DAAA40F-CD2B-430B-BCBA-049CF48E7C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DAAA40F-CD2B-430B-BCBA-049CF48E7C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DAAA40F-CD2B-430B-BCBA-049CF48E7C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DAAA40F-CD2B-430B-BCBA-049CF48E7C85}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8ED66DF6-67FB-46AC-BF42-499B344A18DD}
+	EndGlobalSection
+EndGlobal
