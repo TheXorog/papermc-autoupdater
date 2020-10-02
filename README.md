@@ -1,4 +1,4 @@
-# papermc-autoupdater
+# PaperMC Automatic Update Installer
  
 This program is able to automatically download the latest version of papermc and replace the currently installed one.
 It uses paper's own api.
