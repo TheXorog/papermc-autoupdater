@@ -19,6 +19,9 @@ namespace AutoUpdateSpigot
             _paperAPI = new PaperAPI.PaperAPI();
 
             Console.WriteLine("Loading config..");
+            
+            // Create config files if they dont exist
+            
             if (!File.Exists("autoupdate-version.txt"))
             {
                 File.WriteAllText("autoupdate-version.txt", "version");
@@ -31,20 +34,22 @@ namespace AutoUpdateSpigot
             string version = File.ReadAllText("autoupdate-version.txt");
             string path = File.ReadAllText("autoupdate-path.txt");
 
+            // Exit out of application if files are unedited
+
             if (version == "version")
             {
+                Console.WriteLine("Please specifiy a version in the \"autoupdate-version.txt\"");
                 Environment.Exit(1);
-                return;
             }
-
             if (path == "jarpath")
             {
+                Console.WriteLine("Please specifiy a path in the \"autoupdate-path.txt\"");
                 Environment.Exit(1);
-                return;
             }
 
-            string installedbuild = "";
+            // Check for currently installed build
 
+            string installedbuild = "";
             if (File.Exists($"{path}.version"))
             {
                 installedbuild = File.ReadAllText($"{path}.version");
@@ -65,11 +70,14 @@ namespace AutoUpdateSpigot
 
                 if (installedbuild == latestbuild)
                 {
-                    Console.WriteLine($"Latest build already installed..");
+                    Console.WriteLine($"Latest build already installed.");
                     Environment.Exit(0);
                 }
 
+                Console.WriteLine($"Installed build is \"{installedbuild}\"");
                 Console.WriteLine($"Latest build is \"{latestbuild}\".");
+
+                // Backup replaced files
 
                 if (File.Exists(path))
                 {
