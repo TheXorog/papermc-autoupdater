@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -31,8 +32,8 @@ namespace AutoUpdateSpigot
                 File.WriteAllText("autoupdate-path.txt", "jarpath");
             }
 
-            string version = File.ReadAllText("autoupdate-version.txt");
-            string path = File.ReadAllText("autoupdate-path.txt");
+            string version = File.ReadLines("autoupdate-version.txt").First();
+            string path = File.ReadLines("autoupdate-path.txt").First();
 
             // Exit out of application if files are unedited
 
