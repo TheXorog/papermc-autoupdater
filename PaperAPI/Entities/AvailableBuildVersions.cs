@@ -12,8 +12,8 @@ namespace PaperAPI.Entities
 
         public class Builds
         {
-            public string latest { get; set; }
-            public List<string> all { get; set; }
+            public int latest { get; set; }
+            public List<int> all { get; set; }
         }
     }
 }

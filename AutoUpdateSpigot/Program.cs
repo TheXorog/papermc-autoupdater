@@ -67,7 +67,7 @@ namespace AutoUpdateSpigot
             {
                 Console.WriteLine($"Getting latest build..");
                 var buildversions = await _paperAPI.GetBuildVersions(version);
-                string latestbuild = buildversions.builds.latest;
+                string latestbuild = buildversions.builds.latest.ToString();
 
                 if (installedbuild == latestbuild)
                 {
